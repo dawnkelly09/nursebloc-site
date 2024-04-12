@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import NurseBlocLogo from '../../public/nursebloc-logo-vert.svg'
+import NurseBlockVert from '../../public/nursebloc-logo-vert.svg'
 import TG from '../../public/tg-purple.svg'
 import Insta from '../../public/insta-purple.svg'
 import Twitter from '../../public/twitter-purple.svg'
@@ -13,7 +13,7 @@ export default function Footer(){
         <div className='footer-body'>
             <div>
               <Link href="/" passHref legacyBehavior>
-                <Image priority src={NurseBlocLogo} alt="Nursebloc" width="258" height="101" className="d-inline-block align-text-top" />
+                <Image priority src={NurseBlockVert} alt="Nursebloc" />
               </Link>
             </div>
         

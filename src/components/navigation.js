@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import NurseBlocLogo from '../../public/nursebloc-logo-vert.svg'
+import NurseBlocLogo from '../../public/nursebloc-hor.png'
 import { useWallet } from '@/wallets/wallet-selector';
 import styles from '../app/globals.css'
 
