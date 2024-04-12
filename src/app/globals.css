@@ -57,5 +57,26 @@ a {
   margin-right: 20px;
 }
 
+{/**Footer*/}
+
+.purple-div {
+  width: 100vw;
+  height: 60px;
+  background-color: #6943FF;
+}
+
+.footer-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+  background-color: var(--gray);
+}
+
+
+
 
 

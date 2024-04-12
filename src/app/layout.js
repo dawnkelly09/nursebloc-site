@@ -4,6 +4,7 @@ import '@near-wallet-selector/modal-ui/styles.css';
 
 import { NetworkId } from '@/config';
 import { Navigation } from '@/components/navigation';
+import Footer from '../components/Footer'
 import { useInitWallet } from '@/wallets/wallet-selector';
 
 export default function RootLayout({ children }) {
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );

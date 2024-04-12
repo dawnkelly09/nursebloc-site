@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import NurseBlocLogo from '../../public/nursebloc-logo-vert.svg'
-import NearLogo from 'public/near-logo.svg';
 import { useWallet } from '@/wallets/wallet-selector';
 import styles from '../app/globals.css'
 
