@@ -13,13 +13,13 @@ export default function Footer(){
         <div className='footer-body'>
             <div>
               <Link href="/" passHref legacyBehavior>
-                <Image priority src={NurseBlockVert} alt="Nursebloc" />
+                <Image priority src={NurseBlockVert} alt="Nursebloc" height="120"/>
               </Link>
             </div>
         
             <div>
-              <h4>Departments</h4>
-              <ul>
+              <h6>Departments</h6>
+              <ul className='footer-links'>
                 <li>Family Care</li>
                 <li>Women's Health</li>
                 <li>Bloodwork</li>
@@ -28,8 +28,8 @@ export default function Footer(){
               </ul>
             </div>
             <div>
-              <h4>Quick Links</h4>
-              <ul>
+              <h6>Quick Links</h6>
+              <ul className='footer-links'>
                 <li>Our Nurses</li>
                 <li>Appointment</li>
                 <li>Blog Post</li>
@@ -37,9 +37,9 @@ export default function Footer(){
               </ul>
             </div>
             <div className='footer-icons'>
-              <Image src={TG} alt="Telegram" className='icons-column'/>
-              <Image src={Insta} alt="Instagram" className='icons-column'/>
-              <Image src={Twitter} alt="Twitter aka X" className='icons-column'/>
+              <Image src={TG} alt="Telegram" className='icons-column'height="30"/>
+              <Image src={Insta} alt="Instagram" className='icons-column'height="30"/>
+              <Image src={Twitter} alt="Twitter aka X" className='icons-column' height="30"/>
             </div>
         </div>
         <div className='purple-div'>

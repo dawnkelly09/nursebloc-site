@@ -5,10 +5,11 @@ import NurseBlocLogo from '../../public/nursebloc-hor.png'
 //***NEAR wallet */
 import { useWallet } from '@/wallets/wallet-selector';
 import styles from '../app/globals.css'
+{/** 
 //Dynamic xyz imports
 import { DynamicContextProvider, DynamicWidget } from '@dynamic-labs/sdk-react-core';
 import { EthereumWalletConnectors } from "@dynamic-labs/ethereum";
-
+*/}
 export const Navigation = () => {
 //***NEAR wallet***
   const { signedAccountId, logOut, logIn } = useWallet();
@@ -29,23 +30,25 @@ export const Navigation = () => {
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid nav-logo">
         <Link href="/" passHref legacyBehavior>
-          <Image priority src={NurseBlocLogo} alt="Nursebloc" />
+          <Image priority src={NurseBlocLogo} alt="Nursebloc" height="80"/>
         </Link>
+        {/** 
         <div>
           <Link href="" className='icons-row'>TG icon</Link>
           <Link href="" className='icons-row'>insta icon</Link>
           <Link href="" className='icons-row'>X icon</Link>
-        </div>
+        </div> */}
         <div>
         <Link href="" className='links-row'>About</Link>
         <Link href="" className='links-row'>Plans</Link>
         <Link href="" className='links-row'>Membership</Link>
         <Link href="" className='links-row'>Nurses</Link>
         </div>
-        {/**NEAR button */}
+        {/**NEAR button 
         <div className='navbar-nav'>
           <button className="btn btn-secondary" onClick={action} > {label} </button>
-        </div>
+        </div> */}
+        {/** 
         <div className='navbar-nav'>
         <DynamicContextProvider 
           settings={{ 
@@ -54,7 +57,7 @@ export const Navigation = () => {
           }}> 
             <DynamicWidget /> 
           </DynamicContextProvider> 
-        </div>
+        </div> */}
       </div>
     </nav>
   );
