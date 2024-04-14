@@ -1,5 +1,5 @@
 {
-  "name": "hello-near",
+  "name": "nursebloc",
   "version": "1.0.0",
   "private": true,
   "engines": {
@@ -12,6 +12,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dynamic-labs/ethereum": "^1.4.7",
+    "@dynamic-labs/sdk-react-core": "^1.4.7",
     "@near-wallet-selector/core": "^8.5.1",
     "@near-wallet-selector/here-wallet": "^8.5.1",
     "@near-wallet-selector/modal-ui": "^8.5.1",
