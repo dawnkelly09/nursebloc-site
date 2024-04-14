@@ -8,6 +8,6 @@ This is our first build for this project. This iteration of Nursebloc is built o
 
 - [create-near-app](https://github.com/near/create-near-app) from NEAR Protocol <br>
 Provides access to NEAR blockchain & smart contracts, specifically SocialDB
-- 
+- [Dynamic](https://app.dynamic.xyz/) Authentication 
 
 
