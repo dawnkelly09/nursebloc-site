@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/nanoclone";
+exports.ids = ["vendor-chunks/nanoclone"];
+exports.modules = {
+
+/***/ "(ssr)/./node_modules/nanoclone/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/nanoclone/index.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+eval("\n\n// ES6 Map\nvar map;\ntry {\n  map = Map;\n} catch (_) { }\nvar set;\n\n// ES6 Set\ntry {\n  set = Set;\n} catch (_) { }\n\nfunction baseClone (src, circulars, clones) {\n  // Null/undefined/functions/etc\n  if (!src || typeof src !== 'object' || typeof src === 'function') {\n    return src\n  }\n\n  // DOM Node\n  if (src.nodeType && 'cloneNode' in src) {\n    return src.cloneNode(true)\n  }\n\n  // Date\n  if (src instanceof Date) {\n    return new Date(src.getTime())\n  }\n\n  // RegExp\n  if (src instanceof RegExp) {\n    return new RegExp(src)\n  }\n\n  // Arrays\n  if (Array.isArray(src)) {\n    return src.map(clone)\n  }\n\n  // ES6 Maps\n  if (map && src instanceof map) {\n    return new Map(Array.from(src.entries()))\n  }\n\n  // ES6 Sets\n  if (set && src instanceof set) {\n    return new Set(Array.from(src.values()))\n  }\n\n  // Object\n  if (src instanceof Object) {\n    circulars.push(src);\n    var obj = Object.create(src);\n    clones.push(obj);\n    for (var key in src) {\n      var idx = circulars.findIndex(function (i) {\n        return i === src[key]\n      });\n      obj[key] = idx > -1 ? clones[idx] : baseClone(src[key], circulars, clones);\n    }\n    return obj\n  }\n\n  // ???\n  return src\n}\n\nfunction clone (src) {\n  return baseClone(src, [], [])\n}\n\nmodule.exports = clone;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvbmFub2Nsb25lL2luZGV4LmpzIiwibWFwcGluZ3MiOiJBQUFhOztBQUViO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsRUFBRTtBQUNGOztBQUVBO0FBQ0E7QUFDQTtBQUNBLEVBQUU7O0FBRUY7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsT0FBTztBQUNQO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9udXJzZWJsb2MvLi9ub2RlX21vZHVsZXMvbmFub2Nsb25lL2luZGV4LmpzPzRhYTIiXSwic291cmNlc0NvbnRlbnQiOlsiJ3VzZSBzdHJpY3QnO1xuXG4vLyBFUzYgTWFwXG52YXIgbWFwO1xudHJ5IHtcbiAgbWFwID0gTWFwO1xufSBjYXRjaCAoXykgeyB9XG52YXIgc2V0O1xuXG4vLyBFUzYgU2V0XG50cnkge1xuICBzZXQgPSBTZXQ7XG59IGNhdGNoIChfKSB7IH1cblxuZnVuY3Rpb24gYmFzZUNsb25lIChzcmMsIGNpcmN1bGFycywgY2xvbmVzKSB7XG4gIC8vIE51bGwvdW5kZWZpbmVkL2Z1bmN0aW9ucy9ldGNcbiAgaWYgKCFzcmMgfHwgdHlwZW9mIHNyYyAhPT0gJ29iamVjdCcgfHwgdHlwZW9mIHNyYyA9PT0gJ2Z1bmN0aW9uJykge1xuICAgIHJldHVybiBzcmNcbiAgfVxuXG4gIC8vIERPTSBOb2RlXG4gIGlmIChzcmMubm9kZVR5cGUgJiYgJ2Nsb25lTm9kZScgaW4gc3JjKSB7XG4gICAgcmV0dXJuIHNyYy5jbG9uZU5vZGUodHJ1ZSlcbiAgfVxuXG4gIC8vIERhdGVcbiAgaWYgKHNyYyBpbnN0YW5jZW9mIERhdGUpIHtcbiAgICByZXR1cm4gbmV3IERhdGUoc3JjLmdldFRpbWUoKSlcbiAgfVxuXG4gIC8vIFJlZ0V4cFxuICBpZiAoc3JjIGluc3RhbmNlb2YgUmVnRXhwKSB7XG4gICAgcmV0dXJuIG5ldyBSZWdFeHAoc3JjKVxuICB9XG5cbiAgLy8gQXJyYXlzXG4gIGlmIChBcnJheS5pc0FycmF5KHNyYykpIHtcbiAgICByZXR1cm4gc3JjLm1hcChjbG9uZSlcbiAgfVxuXG4gIC8vIEVTNiBNYXBzXG4gIGlmIChtYXAgJiYgc3JjIGluc3RhbmNlb2YgbWFwKSB7XG4gICAgcmV0dXJuIG5ldyBNYXAoQXJyYXkuZnJvbShzcmMuZW50cmllcygpKSlcbiAgfVxuXG4gIC8vIEVTNiBTZXRzXG4gIGlmIChzZXQgJiYgc3JjIGluc3RhbmNlb2Ygc2V0KSB7XG4gICAgcmV0dXJuIG5ldyBTZXQoQXJyYXkuZnJvbShzcmMudmFsdWVzKCkpKVxuICB9XG5cbiAgLy8gT2JqZWN0XG4gIGlmIChzcmMgaW5zdGFuY2VvZiBPYmplY3QpIHtcbiAgICBjaXJjdWxhcnMucHVzaChzcmMpO1xuICAgIHZhciBvYmogPSBPYmplY3QuY3JlYXRlKHNyYyk7XG4gICAgY2xvbmVzLnB1c2gob2JqKTtcbiAgICBmb3IgKHZhciBrZXkgaW4gc3JjKSB7XG4gICAgICB2YXIgaWR4ID0gY2lyY3VsYXJzLmZpbmRJbmRleChmdW5jdGlvbiAoaSkge1xuICAgICAgICByZXR1cm4gaSA9PT0gc3JjW2tleV1cbiAgICAgIH0pO1xuICAgICAgb2JqW2tleV0gPSBpZHggPiAtMSA/IGNsb25lc1tpZHhdIDogYmFzZUNsb25lKHNyY1trZXldLCBjaXJjdWxhcnMsIGNsb25lcyk7XG4gICAgfVxuICAgIHJldHVybiBvYmpcbiAgfVxuXG4gIC8vID8/P1xuICByZXR1cm4gc3JjXG59XG5cbmZ1bmN0aW9uIGNsb25lIChzcmMpIHtcbiAgcmV0dXJuIGJhc2VDbG9uZShzcmMsIFtdLCBbXSlcbn1cblxubW9kdWxlLmV4cG9ydHMgPSBjbG9uZTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/nanoclone/index.js\n");
+
+/***/ })
+
+};
+;

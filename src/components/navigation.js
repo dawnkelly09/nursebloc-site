@@ -2,22 +2,26 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import NurseBlocLogo from '../../public/nursebloc-hor.png'
+//***NEAR wallet */
 import { useWallet } from '@/wallets/wallet-selector';
 import styles from '../app/globals.css'
+//Dynamic xyz imports
+import { DynamicContextProvider, DynamicWidget } from '@dynamic-labs/sdk-react-core';
+import { EthereumWalletConnectors } from "@dynamic-labs/ethereum";
 
 export const Navigation = () => {
-
+//***NEAR wallet***
   const { signedAccountId, logOut, logIn } = useWallet();
   const [action, setAction] = useState(() => { });
   const [label, setLabel] = useState('Loading...');
-
+  //how label should appear on NEAR login/out button
   useEffect(() => {
     if (signedAccountId) {
       setAction(() => logOut);
-      setLabel(`Logout ${signedAccountId}`);
+      setLabel(`Logout NEAR ${signedAccountId}`);
     } else {
       setAction(() => logIn);
-      setLabel('Login');
+      setLabel('Login NEAR');
     }
   }, [signedAccountId, logOut, logIn, setAction, setLabel]);
 
@@ -25,7 +29,7 @@ export const Navigation = () => {
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid nav-logo">
         <Link href="/" passHref legacyBehavior>
-          <Image priority src={NurseBlocLogo} alt="Nursebloc" width="258" height="101" className="d-inline-block align-text-top" />
+          <Image priority src={NurseBlocLogo} alt="Nursebloc" />
         </Link>
         <div>
           <Link href="" className='icons-row'>TG icon</Link>
@@ -38,8 +42,18 @@ export const Navigation = () => {
         <Link href="" className='links-row'>Membership</Link>
         <Link href="" className='links-row'>Nurses</Link>
         </div>
+        {/**NEAR button */}
         <div className='navbar-nav'>
           <button className="btn btn-secondary" onClick={action} > {label} </button>
+        </div>
+        <div className='navbar-nav'>
+        <DynamicContextProvider 
+          settings={{ 
+          environmentId: '083f7686-ea77-41da-9929-5a0fc0abbc47',
+          walletConnectors: [ EthereumWalletConnectors ],
+          }}> 
+            <DynamicWidget /> 
+          </DynamicContextProvider> 
         </div>
       </div>
     </nav>
