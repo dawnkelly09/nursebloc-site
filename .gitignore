@@ -13,6 +13,7 @@ templates/out
 tmp-project
 #parcel
 .cache
+.next
 
 # production
 /build
