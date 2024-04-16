@@ -15674,13 +15674,14 @@ li {
 
 .links-row {
   margin-right: 20px;
+  font-size: 0.90rem;
 }
 
 {/**Footer*/}
 
 .purple-div {
   width: 100vw;
-  height: 60px;
+  height: 40px;
   background-color: #6943FF;
   color: white;
   display: flex;
@@ -15694,7 +15695,7 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 40px;
   padding-left: 40px;
@@ -15704,6 +15705,12 @@ li {
 .footer-icons {
   display: flex;
   flex-direction: column;
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: column;
+  font-size: small;
 }
 
 .icons-column {

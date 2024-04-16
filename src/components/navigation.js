@@ -2,6 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import NurseBlocLogo from '../../public/nursebloc-hor.png'
+import TG from '../../public/tg-purple.svg'
+import Insta from '../../public/insta-purple.svg'
+import Twitter from '../../public/twitter-purple.svg'
 //***NEAR wallet */
 import { useWallet } from '@/wallets/wallet-selector';
 import styles from '../app/globals.css'
@@ -29,12 +32,18 @@ export const Navigation = () => {
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid nav-logo">
         <Link href="/" passHref legacyBehavior>
-          <Image priority src={NurseBlocLogo} alt="Nursebloc" />
+          <Image priority src={NurseBlocLogo} alt="Nursebloc" height="80"/>
         </Link>
         <div>
-          <Link href="" className='icons-row'>TG icon</Link>
-          <Link href="" className='icons-row'>insta icon</Link>
-          <Link href="" className='icons-row'>X icon</Link>
+          <Link href="" className='icons-row'>
+            <Image priority src={TG} height={20} alt="telegram"/>
+          </Link>
+          <Link href="" className='icons-row'>
+            <Image priority src={Insta} height={20} alt="instagram"/> 
+          </Link>
+          <Link href="" className='icons-row'>
+            <Image priority src={Twitter} height={20} alt="Twitter aka X"/>
+          </Link>
         </div>
         <div>
         <Link href="" className='links-row'>About</Link>
