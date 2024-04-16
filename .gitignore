@@ -3,6 +3,8 @@ dist
 _testrun
 
 # dependencies
+next
+/next
 node_modules
 /.pnp
 .pnp.js
@@ -13,6 +15,7 @@ templates/out
 tmp-project
 #parcel
 .cache
+.next
 
 # production
 /build
